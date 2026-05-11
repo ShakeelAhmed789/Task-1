@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Task_1
 {
@@ -16,14 +16,24 @@ namespace Task_1
             Console.Write("Enter your full name: ");
             fullName = Console.ReadLine();
 
-            Console.Write("Enter you age: ");
-            age = int.Parse(Console.ReadLine());
+            Console.Write("\nEnter you age: ");
+            while (!int.TryParse(Console.ReadLine(), out age))
+            {
+                Console.Write("\nInvalid Input." +
+                              "\nPlease, enter your age again: ");
+            }
 
-            Console.Write("Enter you favorite number: ");
-            favNumber = int.Parse(Console.ReadLine());
+
+            Console.Write("\nEnter you favorite number: ");
+            while (!int.TryParse(Console.ReadLine(), out favNumber))
+            { 
+                Console.Write("\nInvalid Input." +
+                              "\nPlease enter your favorite number again: ");
+            }
 
             magicNumber = age * favNumber;
 
+            Console.WriteLine("\n\n****** User's details ******");
             Console.WriteLine($"\nFull Name: {fullName}" +
                                 $"\nAge: {age}" +
                                 $"\nFavorite number: {favNumber}" +

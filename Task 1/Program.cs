@@ -11,6 +11,8 @@ namespace Task_1
             int favNumber;
             int magicNumber;
 
+            Console.WriteLine("****** Personal Profile Generator ******\n");
+
             Console.Write("Enter your full name: ");
             fullName = Console.ReadLine();
 
@@ -25,7 +27,7 @@ namespace Task_1
             Console.WriteLine($"\nFull Name: {fullName}" +
                                 $"\nAge: {age}" +
                                 $"\nFavorite number: {favNumber}" +
-                                $"\nMagicNumber: {magicNumber}"
+                                $"\nMagic Number: {magicNumber}"
                              );
         }
     }
